@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mini_avatar">24dp</dimen>
+    <dimen name="avatar">56dp</dimen>
+    <dimen name="little_blank">8dp</dimen>
+    <dimen name="blank">16dp</dimen>
+    <dimen name="navbar">56dp</dimen>
+    <dimen name="icon">24dp</dimen>
+    <dimen name="item">48dp</dimen>
+    <dimen name="title">20sp</dimen>
+    <dimen name="app_bar">48dp</dimen>
+    <dimen name="slide_bar">24dp</dimen>
+</resources>

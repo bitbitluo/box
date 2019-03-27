@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="blog"
+            type="com.bytesci.treebox.home.User"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/blank"
+        android:paddingBottom="1dp">
+        <TextView
+            android:id="@+id/tv_essay_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="@dimen/little_blank"
+            android:text="@={blog.title}"
+            tools:text="标题"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/sub_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/little_blank"
+            android:text="@={blog.title}"
+            tools:text="内容"
+            app:layout_constraintTop_toBottomOf="@id/tv_essay_title" />
+
+        <ImageView
+            android:id="@+id/iv_picture1"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_avatar"
+            app:layout_constraintEnd_toStartOf="@+id/iv_picture2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sub_content" />
+
+        <ImageView
+            android:id="@+id/iv_picture2"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_avatar"
+            android:layout_marginLeft="@dimen/little_blank"
+            android:layout_marginRight="@dimen/little_blank"
+            app:layout_constraintEnd_toStartOf="@+id/iv_picture3"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/iv_picture1"
+            app:layout_constraintTop_toBottomOf="@+id/sub_content" />
+
+        <ImageView
+            android:id="@+id/iv_picture3"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/iv_picture2"
+            app:layout_constraintTop_toBottomOf="@+id/sub_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#10000000"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

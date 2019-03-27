@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主题颜色 -->
+    <color name="colorTheme">#ff00B8A9</color>
+
+    <color name="colorPrimary">@color/colorTheme</color>
+    <color name="colorPrimaryDark">@color/colorTheme</color>
+    <color name="colorAccent">@color/white</color>
+
+    <!-- 背景色 -->
+    <color name="colorBackground">#fff0f2f8</color>
+
+    <!-- 分隔线12% -->
+    <color name="divLine">#0E000000</color>
+
+    <!-- 按钮颜色 -->
+    <color name="btblue">#333fb6fe</color>
+
+    <color name="white">#FFF</color>
+    <color name="textColor">#de000000</color>
+
+    <color name="silkRed">#f05654</color>
+
+    <color name="bad">#888888</color>
+
+    <color name="good">@color/colorTheme</color>
+</resources>

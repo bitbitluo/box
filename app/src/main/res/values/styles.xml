@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorTheme</item>
+        <item name="colorAccent">@color/colorTheme</item>
+
+        <!-- 背景色 -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+
+        <!-- 常规字体 -->
+        <item name="android:textColor">#de000000</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+    <!-- 全屏主题 -->
+    <style name="FullScreenTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- 自定义Dialog主题 -->
+    <style name="theme_dialog" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+    <style name="pop_anim_style">
+
+    </style>
+
+
+    <style name="item_list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 控件着色 -->
+    <style name="whiteTint" parent="AppTheme">
+        <item name="colorControlNormal">@color/divLine</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+</resources>
+
