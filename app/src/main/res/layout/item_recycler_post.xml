@@ -5,9 +5,9 @@
     <data>
         <variable
             name="blog"
-            type="com.bytesci.treebox.home.User"/>
+            type="com.bytesci.box.entity.Post"/>
     </data>
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -72,5 +72,5 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#10000000"/>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

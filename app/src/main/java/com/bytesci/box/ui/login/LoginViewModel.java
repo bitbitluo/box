@@ -41,7 +41,7 @@ public class LoginViewModel extends ViewModel {
         final User user = new User();
         if(!password1.equals(password2)){
             Toast.makeText(APP.APP_CONTEXT, "两次密码不一致", Toast.LENGTH_SHORT).show();
-            T.show("" + password1 + password2, Toast.LENGTH_SHORT);
+            T.show("" + password1 + password2);
             return ;
         }
         if(password1.length() <= 6){

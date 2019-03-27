@@ -2,7 +2,13 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
+        <variable
+            name="post"
+            type="com.bytesci.box.entity.Post"/>
 
+        <variable
+            name="viewModel"
+            type="com.bytesci.box.viewModel.PostViewModel"/>
 
     </data>
 
@@ -15,20 +21,20 @@
         <Button
             android:id="@+id/edit_blog_publish"
             android:text="发布"
-            android:onClick="@{()->viewModel.saveBlog()}"
+            android:onClick="@{()->viewModel.savePost()}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />
 
         <EditText
             android:hint="标题"
-            android:text="@={blog.title}"
+            android:text="@={post.title}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <EditText
             android:hint="内容"
-            android:text="@={blog.content}"
+            android:text="@={post.content}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

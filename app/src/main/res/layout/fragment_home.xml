@@ -4,14 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
-        <import type="com.bytesci.treebox.R" />
-
-        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
-
         <variable
             name="viewModel"
-            type="com.bytesci.treebox.home.BlogViewModel" />
+            type="com.bytesci.box.viewModel.PostViewModel"/>
+
     </data>
 
     <LinearLayout
@@ -21,7 +17,7 @@
         android:orientation="vertical">
 
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/blank">
@@ -150,7 +146,7 @@
                     android:textColor="@color/white" />
             </LinearLayout>
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.ConstraintLayout>
 
 
         <LinearLayout
@@ -231,15 +227,10 @@
 
             </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_essay_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:itemBinding="@{viewModel.itemBinding}"
-                app:items="@{viewModel.items}"
-                app:layoutManager="@{LayoutManagers.linear()}" />
+
 
         </LinearLayout>
+
 
 
     </LinearLayout>

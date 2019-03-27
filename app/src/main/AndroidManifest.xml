@@ -40,32 +40,32 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:maxAspectRatio="2.4"
+        android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        android:resizeableActivity="true"
-        android:maxAspectRatio="2.4"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="o">
 
-        <!-- 处理全面屏和齐流海-->
+        <!-- 处理全面屏和齐流海 -->
         <meta-data
             android:name="android.max_aspect"
             android:value="2.4" />
-        <!--适配华为（huawei）刘海屏-->
+        <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"
-            android:value="true"/>
-        <!--适配小米（xiaomi）刘海屏-->
+            android:value="true" />
+        <!-- 适配小米（xiaomi）刘海屏 -->
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />
-        <!-- 百度地图 API-->
+        <!-- 百度地图 API -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="gPLoDPB9oKRRKMMaG8ZKMFS5dmMV0Pql" />
-        <!-- Bmob API-->
+        <!-- Bmob API -->
         <meta-data
             android:name="Bmob_APP_KEY"
             android:value="e68e5910178df181374dd3a6b109a772" />
@@ -80,14 +80,13 @@
             </intent-filter>
         </activity>
 
-
-        <!--百度地图服务-->
+        <!-- 百度地图服务 -->
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
 
-        <!--Bmob服务和广播-->
+        <!-- Bmob服务和广播 -->
         <receiver android:name="cn.bmob.newim.core.ConnectChangeReceiver">
             <intent-filter>
                 <action android:name="cn.bmob.action.RECONNECT" />
@@ -96,6 +95,7 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
+
         <service
             android:name="cn.bmob.newim.core.service.BmobIMService"
             android:process=":bmobcore" />
@@ -104,6 +104,8 @@
             android:process=":bmobcore" />
         <service android:name="cn.bmob.newim.core.service.ReConnectService" />
         <service android:name="cn.bmob.newim.core.service.HeartBeatService" />
+
+        <activity android:name=".ui.CarControllActivity"></activity>
     </application>
 
 </manifest>
