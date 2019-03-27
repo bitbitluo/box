@@ -3,14 +3,12 @@ package com.bytesci.box.ui.login;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+import androidx.databinding.BaseObservable;
 import androidx.fragment.app.Fragment;
 
 import com.bytesci.box.R;
 import com.bytesci.box.base.BaseActivity;
 import com.bytesci.box.util.Tools;
-
-
-import androidx.lifecycle.ViewModelProviders;
 
 
 public class LoginActivity extends BaseActivity {

@@ -1,53 +1,51 @@
 package com.bytesci.box.viewModel;
 
 import android.app.Activity;
-import android.content.Intent;
 
-import com.bytesci.box.R;
 import com.bytesci.box.databinding.ActivityEditPostBinding;
+import com.bytesci.box.entity.Post;
 import com.bytesci.box.entity.User;
 import com.bytesci.box.model.PostModel;
-import com.bytesci.box.ui.main.MainActivity;
+import com.bytesci.box.model.UserModel;
+import com.bytesci.box.ui.MainActivity;
+import com.bytesci.box.util.AppManager;
+import com.bytesci.box.util.T;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import androidx.databinding.ObservableArrayList;
 import androidx.databinding.ObservableField;
-import androidx.databinding.ObservableList;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 
 public class PostViewModel extends ViewModel {
-    private Activity mActivity;
-    private ActivityEditPostBinding mBinding;
-    private PostModel mBlogModel;
-    List<User> dbBlogs;
 
 
 
+    private MutableLiveData<Post> post = new MutableLiveData<>();
 
-    public ObservableField<List<User>> blogs = new ObservableField<>();
-    // 构造函数
-    public PostViewModel(Activity activity, ActivityEditPostBinding binding) {
-        mActivity = activity;
-        mBinding = binding;
-        mBlogModel = new PostModel();
-    }
-
-    public PostViewModel(Activity activity) {
-        mActivity = activity;
-        mBlogModel = new PostModel();
-
-    }
 
     public void savePost(){
-
+        String title = post.getValue().getTitle();
+        String content = post.getValue().getContent();
+        PostModel.getInstance().savePost(title, content, new SaveListener<String>() {
+            @Override
+            public void done(String s, BmobException e) {
+                if(e == null)
+                    AppManager.getAppManager().startActivity(MainActivity.class);
+                else
+                    T.show(e.getMessage());
+            }
+        });
     }
 
-    public void getPostFromDB(){
-
+    public MutableLiveData<Post> getPost() {
+        return post;
     }
 
-    public void updatePost(){
-
+    public void setPost(Post post) {
+        this.post.setValue(post);
     }
 }

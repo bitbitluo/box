@@ -6,7 +6,7 @@ import android.graphics.BitmapFactory;
 
 import com.bytesci.box.APP;
 import com.bytesci.box.R;
-import com.bytesci.box.ui.main.MainActivity;
+import com.bytesci.box.ui.MainActivity;
 
 import cn.bmob.newim.event.MessageEvent;
 import cn.bmob.newim.event.OfflineMessageEvent;

@@ -11,66 +11,84 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:padding="@dimen/blank"
-        android:paddingBottom="1dp">
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/alice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/civ_avatar"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小南南"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019年3月27日"
+                android:textColor="#999"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="小南南我好喜欢你啊~\n好喜欢好喜欢" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看 >"
+                android:textColor="#f17c67"
+                android:textSize="13dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#ddd" />
+        </LinearLayout>
+
         <TextView
-            android:id="@+id/tv_essay_title"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:paddingBottom="@dimen/little_blank"
-            android:text="@={blog.title}"
-            tools:text="标题"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/sub_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/little_blank"
-            android:text="@={blog.title}"
-            tools:text="内容"
-            app:layout_constraintTop_toBottomOf="@id/tv_essay_title" />
+            android:text="520"
+            android:textColor="#999"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/content" />
 
         <ImageView
-            android:id="@+id/iv_picture1"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/test_avatar"
-            app:layout_constraintEnd_toStartOf="@+id/iv_picture2"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sub_content" />
+            android:id="@+id/imageView2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/like"
+            app:layout_constraintEnd_toEndOf="@+id/content"
+            app:layout_constraintTop_toTopOf="@+id/content" />
 
-        <ImageView
-            android:id="@+id/iv_picture2"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/test_avatar"
-            android:layout_marginLeft="@dimen/little_blank"
-            android:layout_marginRight="@dimen/little_blank"
-            app:layout_constraintEnd_toStartOf="@+id/iv_picture3"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/iv_picture1"
-            app:layout_constraintTop_toBottomOf="@+id/sub_content" />
 
-        <ImageView
-            android:id="@+id/iv_picture3"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/test_avatar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/iv_picture2"
-            app:layout_constraintTop_toBottomOf="@+id/sub_content" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#10000000"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

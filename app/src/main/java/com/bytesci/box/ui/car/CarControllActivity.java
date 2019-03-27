@@ -1,4 +1,4 @@
-package com.bytesci.box.ui;
+package com.bytesci.box.ui.car;
 
 import androidx.appcompat.app.AppCompatActivity;
 

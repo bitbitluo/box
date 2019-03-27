@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.bytesci.box.APP;
 import com.bytesci.box.entity.User;
 import com.bytesci.box.model.UserModel;
-import com.bytesci.box.ui.main.MainActivity;
+import com.bytesci.box.ui.MainActivity;
 import com.bytesci.box.util.T;
 
 

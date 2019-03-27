@@ -3,6 +3,7 @@ package com.bytesci.box.base;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.BaseObservable;
 
 import com.bytesci.box.util.AppManager;
 

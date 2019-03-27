@@ -1,4 +1,4 @@
-package com.bytesci.box.ui;
+package com.bytesci.box.ui.splash;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,10 +11,12 @@ import android.widget.Button;
 import com.bytesci.box.R;
 import com.bytesci.box.base.BaseActivity;
 import com.bytesci.box.model.UserModel;
+import com.bytesci.box.ui.MainActivity;
 import com.bytesci.box.ui.login.LoginActivity;
-import com.bytesci.box.ui.main.MainActivity;
 import com.bytesci.box.util.AppStatic;
 import com.bytesci.box.util.Tools;
+
+import androidx.databinding.BaseObservable;
 
 
 public class SplashActivity extends BaseActivity implements View.OnClickListener {

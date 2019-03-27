@@ -1,8 +1,18 @@
 package com.bytesci.box.entity;
 
-public class Post {
+import cn.bmob.v3.BmobObject;
+
+public class Post extends BmobObject {
     private String title;
     private String content;
+
+    public Post() {
+    }
+
+    public Post(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 
     public String getTitle() {
         return title;
